@@ -20,6 +20,8 @@ class DonationsController < ApplicationController
 
 
   private
-  def donation_params
-    params.require(:donation_address).permit(:postal_code, :prefecture, :city, :house_number, :building_name, :price).merge(user_id: current_user.id)
+    def donation_params
+      params.require(:donation_address).permit(:postal_code, :prefecture, :city, :house_number, :building_name, :price).merge(user_id: current_user.id)
+    end
   end
+end
